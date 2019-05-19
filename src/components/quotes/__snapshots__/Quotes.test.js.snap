@@ -8,8 +8,8 @@ exports[`quote test renders a quote 1`] = `
   <p>
     Leela
   </p>
-  <span>
+  <p>
     Quote
-  </span>
+  </p>
 </section>
 `;

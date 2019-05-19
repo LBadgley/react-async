@@ -6,7 +6,7 @@ export default function Quote({ quote }) {
     <section>
       <img src={quote.image} />
       <p>{quote.character}</p>
-      <span>{quote.quote}</span>
+      <p>{quote.quote}</p>
     </section>
   );
 }
