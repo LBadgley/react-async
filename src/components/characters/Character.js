@@ -22,6 +22,11 @@ function Character({ character }) {
 
 Character.propTypes = {
   character: PropTypes.shape({
-    
-  })
-}
+    name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired, 
+    species: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
+  }).isRequired
+};
+
+export default Character;
