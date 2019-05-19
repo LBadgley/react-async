@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.[hash].js'
   },
   devServer: {
-    port: 8888
+    port: 7890
   },
   plugins: [
     new HtmlPlugin({ template: './src/index.html' }),

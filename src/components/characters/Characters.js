@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// presentational component
-
 function Character({ character }) {
   const {
     name,
@@ -30,3 +28,4 @@ Character.propTypes = {
 };
 
 export default Character;
+
