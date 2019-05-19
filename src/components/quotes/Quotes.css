@@ -3,14 +3,17 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+  background-image: url(https://cdn.dribbble.com/users/337193/screenshots/2156631/futurama.png);
 
   li {
+    display: flex;
     width: 20vw;
     margin: 2em;
     padding: 2rem;
-
-    background-color: #f0f0f0;
-
+    justify-content: center;
+    border: 5px outset rgb(255, 0, 0);
+    background-color: rgb(157, 252, 187);
+    
     text-align: center;
 
     list-style-type: none;
@@ -18,7 +21,6 @@
 
   section {
     margin: auto;
-    animation: insert 0.5s linear;
   }
 
   img {
@@ -26,13 +28,4 @@
     margin: auto;
   }
 
-  @keyframes insert {
-    from {
-      width: 0;
-    }
-
-    to {
-      width: 100%;
-    }
-  }
 }
