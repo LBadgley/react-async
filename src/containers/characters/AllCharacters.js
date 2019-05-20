@@ -23,7 +23,6 @@ export default class AllCharacters extends PureComponent {
 
   render() {
     const { characters, loading } = this.state;
-
     if(loading) return <Loading />;
 
     return <Characters characters={characters} />;
