@@ -3,21 +3,23 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+  background-color: rgb(252, 252, 171);
 
   li {
     width: 20vw;
     margin: 2em;
     padding: 2rem;
-    background-color: pink;
-  
+    background-color: white;
+    font-size: 16px;
     text-align: center;
-
     list-style-type: none;
   }
 
   section {
     margin: auto;
+    background-color: white;
 
+    color: black;
     animation: insert a linear;
   }
 
