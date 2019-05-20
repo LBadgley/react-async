@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Characters({ character }) {
+function Character({ character }) {
   const {
     name,
     status,
@@ -18,7 +18,7 @@ function Characters({ character }) {
   );
 }
 
-Characters.propTypes = {
+Character.propTypes = {
   character: PropTypes.shape({
     name: PropTypes.string.isRequired,
     status: PropTypes.string.isRequired, 
@@ -27,5 +27,5 @@ Characters.propTypes = {
   }).isRequired
 };
 
-export default Characters;
+export default Character;
 
