@@ -1,31 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Character from './Character';
+import styles from './Characters.css';
 
-function Character({ character }) {
-  const {
-    name,
-    status,
-    species,
-    image
-  } = character;
+function Characters({ characters }) {
+  const characterList = characters.map((character, i) => {
+    <li key={i}>
+      <Character character={character} />
+    </li>;
+  });
+  
+
   return (
-    <section>
-      <img src={image} />
-      <p>{name}</p>
-      <p>{status}</p>
-      <p>{species}</p>
-    </section>
+    <ul className={styles.Characters}>
+      {characterList}
+    </ul>
   );
 }
 
-Character.propTypes = {
-  character: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    status: PropTypes.string.isRequired, 
-    species: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
-  }).isRequired
+Characters.propTypes = {
+  characters: PropTypes.array.isRequired
 };
 
-export default Character;
-
+export default Characters;
