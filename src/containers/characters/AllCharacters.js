@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import Characters from '../../components/characters/Characters';
 import Loading from '../../components/Loading';
-import { getCharacters } from '../../services/rickAndMortyApi';
+import { getCharacters } from '../../services/rickAndMortyApi.js';
 import Paging from '../../components/paging/Paging';
 
 export default class AllCharacters extends PureComponent {
@@ -45,6 +45,10 @@ export default class AllCharacters extends PureComponent {
     } = this.state;
     if(loading) return <Loading />;
 
-    return <Characters characters={characters} />;
+    return (
+      <Paging currentPage={currentPage} totalPages={totalPages} nextPage={this.nextPage}>
+        <Characters characters={characters} />
+      </Paging>
+    );
   }
 }

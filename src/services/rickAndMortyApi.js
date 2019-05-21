@@ -3,12 +3,11 @@ export const getCharacters = (page = 1) => {
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'unable to fetch characters';
-
       return json;
     })
     .then(({ info, results }) => ({
       totalPages: info.pages,
-      character: results.map(character => ({
+      characters: results.map(character => ({
         name: character.name,
         species: character.species,
         status: character.status,
